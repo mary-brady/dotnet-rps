@@ -14,7 +14,6 @@ namespace rock_paper_scissors
             bool playing = true;
 
             Random random = new Random();
-            int ComputerChoice = random.Next(0, 3);
             while (playing)
             {
                 Console.WriteLine("Choose your weapon:");
@@ -23,6 +22,7 @@ namespace rock_paper_scissors
 
                 string PlayerChoice = Console.ReadLine().ToLower();
 
+                int ComputerChoice = random.Next(3);
                 if (PlayerChoice == choices[ComputerChoice])
                 {
                     Console.WriteLine("Tie game...Play Again? (Y/N)");
