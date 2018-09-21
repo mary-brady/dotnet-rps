@@ -26,13 +26,18 @@ namespace rock_paper_scissors
                 if (PlayerChoice == choices[ComputerChoice])
                 {
                     Console.WriteLine("Tie game...Play Again? (Y/N)");
+                    string response = Console.ReadLine();
+                    if (response.ToUpper() != "Y")
+                    {
+                        playing = false;
+                    }
                 }
 
                 if (PlayerChoice == "rock")
                 {
                     if (ComputerChoice == 1)
                     {
-                        Console.WriteLine($"Computer chose {ComputerChoice}, Computer wins! Play again? (Y/N)");
+                        Console.WriteLine($"Computer chose {choices[ComputerChoice]}, Computer wins! Play again? (Y/N)");
                         string response = Console.ReadLine();
                         if (response.ToUpper() != "Y")
                         {
@@ -41,7 +46,7 @@ namespace rock_paper_scissors
                     }
                     else
                     {
-                        Console.WriteLine($"You chose {PlayerChoice}! You Win! Computer chose {ComputerChoice}. Play again? (Y/N)");
+                        Console.WriteLine($"You chose {PlayerChoice}- you won! Computer chose {choices[ComputerChoice]}. Play again? (Y/N)");
                         string response = Console.ReadLine();
                         if (response.ToUpper() != "Y")
                         {
@@ -53,7 +58,7 @@ namespace rock_paper_scissors
                 {
                     if (ComputerChoice == 2)
                     {
-                        Console.WriteLine($"Computer chose {ComputerChoice}, Computer wins! Play again? (Y/N)");
+                        Console.WriteLine($"Computer chose {choices[ComputerChoice]}, Computer wins! Play again? (Y/N)");
                         string response = Console.ReadLine();
                         if (response.ToUpper() != "Y")
                         {
@@ -62,7 +67,7 @@ namespace rock_paper_scissors
                     }
                     else
                     {
-                        Console.WriteLine($"You chose {PlayerChoice}! You Win! Computer chose {ComputerChoice}. Play again? (Y/N)");
+                        Console.WriteLine($"You chose {PlayerChoice} - you won! Computer chose {choices[ComputerChoice]}. Play again? (Y/N)");
                         string response = Console.ReadLine();
                         if (response.ToUpper() != "Y")
                         {
@@ -74,7 +79,7 @@ namespace rock_paper_scissors
                 {
                     if (PlayerChoice == "scissors")
                     {
-                        Console.WriteLine($"Computer chose {ComputerChoice}, Computer wins! Play again? (Y/N)");
+                        Console.WriteLine($"Computer chose {choices[ComputerChoice]}, Computer wins! Play again? (Y/N)");
                         string response = Console.ReadLine();
                         if (response.ToUpper() != "Y")
                         {
